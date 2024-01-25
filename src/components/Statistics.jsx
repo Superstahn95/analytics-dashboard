@@ -2,6 +2,7 @@ import React from "react";
 import AnalyticsCard from "./AnalyticsCard";
 import { salesData, dashboardAnalytics } from "../data";
 import OrderTable from "./OrderTable";
+import PlatformStat from "./PlatformStat";
 
 function Statistics() {
   return (
@@ -17,6 +18,9 @@ function Statistics() {
         </div>
         <div className="col-span-3">
           <OrderTable />
+        </div>
+        <div className="col-span-2">
+          <PlatformStat />
         </div>
       </div>
     </div>

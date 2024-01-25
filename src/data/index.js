@@ -97,3 +97,38 @@ export const salesData = [
   { month: "Nov", amount: 30000 },
   { month: "Des", amount: 25000 },
 ];
+
+export const platformData = [
+  {
+    id: 1,
+    name: "Book Bazaar",
+    percentageIncrease: "15%",
+    progressBarPercentage: 50,
+    amount: "$2,500,000",
+    hexColor: "#6160DC",
+  },
+  {
+    id: 1,
+    name: "Artisan Aisle",
+    percentageIncrease: "10%",
+    progressBarPercentage: 40,
+    amount: "$1,800,000",
+    hexColor: "#54C5EB",
+  },
+  {
+    id: 1,
+    name: "Troy Troop",
+    percentageIncrease: "8%",
+    progressBarPercentage: 30,
+    amount: "$1,200,000",
+    hexColor: "#FFB74A",
+  },
+  {
+    id: 1,
+    name: "Xstore",
+    percentageIncrease: "8%",
+    progressBarPercentage: 30,
+    amount: "$1,200,000",
+    hexColor: "#FF4A55",
+  },
+];

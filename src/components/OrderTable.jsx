@@ -10,7 +10,7 @@ function OrderTable() {
   return (
     <WidgetWrapper>
       <div className="flex items-center justify-between">
-        <span className="font-jakarta text-[18px] text-[#26282C]">
+        <span className="font-jakarta text-[18px] text-[#26282C] font-bold">
           Last Orders
         </span>
         <span className="font-jakarta text-[18px] text-[#34CAA5]">See All</span>
