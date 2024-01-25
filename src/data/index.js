@@ -7,7 +7,7 @@ export const orders = [
   {
     id: 1,
     name: "Marcus Bergson",
-    amount: 80000,
+    amount: "$80,000",
     status: "Paid",
     image: "/images/marcus.png",
     date: "Nov 15, 2023",
@@ -15,7 +15,7 @@ export const orders = [
   {
     id: 2,
     name: "Jaydon Vaccaro",
-    amount: 150000,
+    amount: "$150,000",
     status: "Refund",
     image: "/images/jaydon.png",
     date: "Nov 15, 2023",
@@ -23,7 +23,7 @@ export const orders = [
   {
     id: 3,
     name: "Corey Schleifer",
-    amount: 87000,
+    amount: "$87,000",
     status: "Paid",
     image: "/images/corey.png",
     date: "Nov 14, 2023",
@@ -31,7 +31,7 @@ export const orders = [
   {
     id: 4,
     name: "Cooper Press",
-    amount: 100000,
+    amount: "$100,000",
     status: "Refund",
     image: "/images/cooper.png",
     date: "Nov 14, 2023",
@@ -39,7 +39,7 @@ export const orders = [
   {
     id: 5,
     name: "Phillip Lubin",
-    amount: 78000,
+    amount: "$78,000",
     status: "Paid",
     image: "/images/phillip.png",
     date: "Nov 13, 2023",

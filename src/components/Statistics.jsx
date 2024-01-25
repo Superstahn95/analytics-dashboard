@@ -1,6 +1,7 @@
 import React from "react";
 import AnalyticsCard from "./AnalyticsCard";
 import { salesData, dashboardAnalytics } from "../data";
+import OrderTable from "./OrderTable";
 
 function Statistics() {
   return (
@@ -13,6 +14,9 @@ function Statistics() {
           {dashboardAnalytics.map((analytics) => (
             <AnalyticsCard key={analytics.id} analytics={analytics} />
           ))}
+        </div>
+        <div className="col-span-3">
+          <OrderTable />
         </div>
       </div>
     </div>
