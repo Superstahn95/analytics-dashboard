@@ -1,3 +1,7 @@
+import BoxTick from "/svg/box-tick.svg";
+import Rotate from "/svg/3d-rotate.svg";
+import Cart from "/svg/shopping-cart.svg";
+import Coin from "/svg/coin.svg";
 //orders data source
 export const orders = [
   {
@@ -50,6 +54,7 @@ export const dashboardAnalytics = [
     number: 350,
     percentage: 23.5,
     isIncrease: true,
+    url: BoxTick,
   },
   {
     id: 2,
@@ -57,6 +62,7 @@ export const dashboardAnalytics = [
     number: 270,
     percentage: 23.5,
     isIncrease: false,
+    url: Rotate,
   },
   {
     id: 3,
@@ -64,6 +70,7 @@ export const dashboardAnalytics = [
     number: 1567,
     percentage: 23.5,
     isIncrease: false,
+    url: Cart,
   },
   {
     id: 4,
@@ -71,6 +78,7 @@ export const dashboardAnalytics = [
     number: 350,
     percentage: 23.5,
     isIncrease: true,
+    url: Coin,
   },
 ];
 
