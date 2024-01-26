@@ -23,7 +23,7 @@ function Sidebar() {
     //     <Controls />
     //   </div>
     // </div>
-    <div className=" shadow-md  bg-white  fixed w-[80px] top-0 left-0 h-full dark:bg-slate-800">
+    <div className=" shadow-md  bg-white  fixed w-[80px] z-[99] top-0 left-0 h-full dark:bg-slate-800 ">
       <div className="p-[20px] flex flex-col items-center justify-between bg-[#F7F8FA] dark:bg-slate-900 h-[90vh]">
         {/* logo div */}
         <div className="flex flex-col space-y-5 items-center justify-center">

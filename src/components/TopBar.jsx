@@ -22,7 +22,7 @@ function TopBar() {
         </div>
 
         {/* date div */}
-        <div className="flex items-center space-x-2">
+        <div className=" items-center space-x-2 hidden md:flex">
           <img src={Calender} alt="" />
           <span className="font-inter text-[14px]">November 15, 2023</span>
         </div>
