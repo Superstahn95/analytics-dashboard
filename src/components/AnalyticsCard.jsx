@@ -14,10 +14,10 @@ function AnalyticsCard({ analytics }) {
         <img src={analytics.isIncrease ? Buy : Sell} alt="" />
       </div>
       <div className="mt-2">
-        <p className="font-jakarta text-[#898989] capitalize text-[18px]">
+        <p className="font-jakarta text-[#898989] dark:text-white capitalize text-[18px]">
           {analytics.description}
         </p>
-        <span className="text-[#3A3F51] font-jakarta font-semibold text-[24px]">
+        <span className="text-[#3A3F51] font-jakarta font-semibold text-[24px] dark:text-white">
           {analytics.number}
         </span>
       </div>
@@ -37,7 +37,7 @@ function AnalyticsCard({ analytics }) {
           </span>
         </div>
         <div className=" p-[2px] ">
-          <span className="font-inter text-[14px] text-[#606060] ">
+          <span className="font-inter text-[14px] text-[#606060] dark:text-white">
             vs. previous month
           </span>
         </div>

@@ -6,14 +6,14 @@ function PlatformStat() {
   return (
     <WidgetWrapper>
       <div className="flex items-center justify-between ">
-        <span className="font-jakarta text-[18px] text-[#26282C] font-bold">
+        <span className="font-jakarta text-[18px] text-[#26282C] dark:text-white font-bold">
           Top Platform
         </span>
         <span className="font-jakarta text-[18px] text-[#34CAA5]">See All</span>
       </div>
       {platformData.map((platform) => (
         <div key={platform.id}>
-          <h3 className="font-jakarta text-[18px] text-[#22242C] mt-2">
+          <h3 className="font-jakarta text-[18px] text-[#22242C] dark:text-white mt-2">
             {platform.name}
           </h3>
           <ProgressBar
@@ -27,10 +27,10 @@ function PlatformStat() {
             // labelClassName="label"
           />
           <div className="flex items-center justify-between">
-            <span className="text-[#525252] font-jakarta text-[18px]">
+            <span className="text-[#525252] dark:text-white font-jakarta text-[18px]">
               {platform.amount}
             </span>
-            <span className="text-[#525252] font-jakarta text-[18px]">
+            <span className="text-[#525252] dark:text-white font-jakarta text-[18px]">
               {platform.percentageIncrease}
             </span>
           </div>

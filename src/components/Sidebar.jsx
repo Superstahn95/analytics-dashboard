@@ -6,8 +6,8 @@ import Controls from "./Controls";
 
 function Sidebar() {
   return (
-    <div className="bg-white shadow-md">
-      <div className="p-[20px] flex flex-col items-center justify-between bg-[#F7F8FA] h-[90vh]">
+    <div className="bg-white shadow-md dark:bg-slate-800">
+      <div className="p-[20px] flex flex-col items-center justify-between bg-[#F7F8FA] dark:bg-slate-900 h-[90vh]">
         {/* logo div */}
         <div className="flex flex-col space-y-5 items-center justify-center">
           <img src={Logo} alt="" />

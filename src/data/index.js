@@ -108,7 +108,7 @@ export const platformData = [
     hexColor: "#6160DC",
   },
   {
-    id: 1,
+    id: 2,
     name: "Artisan Aisle",
     percentageIncrease: "10%",
     progressBarPercentage: 40,
@@ -116,7 +116,7 @@ export const platformData = [
     hexColor: "#54C5EB",
   },
   {
-    id: 1,
+    id: 3,
     name: "Troy Troop",
     percentageIncrease: "8%",
     progressBarPercentage: 30,
@@ -124,7 +124,7 @@ export const platformData = [
     hexColor: "#FFB74A",
   },
   {
-    id: 1,
+    id: 4,
     name: "Xstore",
     percentageIncrease: "8%",
     progressBarPercentage: 30,

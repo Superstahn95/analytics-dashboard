@@ -3,13 +3,16 @@ import AnalyticsCard from "./AnalyticsCard";
 import { salesData, dashboardAnalytics } from "../data";
 import OrderTable from "./OrderTable";
 import PlatformStat from "./PlatformStat";
+import Chart from "./Chart";
 
 function Statistics() {
   return (
     <div className="p-[20px]">
       <div className="grid grid-cols-5 gap-4">
         {/* chart component */}
-        <div className="col-span-3">Chart</div>
+        <div className="col-span-3">
+          <Chart />
+        </div>
         {/* analytics */}
         <div className="col-span-2 grid grid-cols-2 gap-4">
           {dashboardAnalytics.map((analytics) => (

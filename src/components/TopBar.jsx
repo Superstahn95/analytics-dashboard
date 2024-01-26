@@ -6,7 +6,7 @@ import MiniProfile from "./MiniProfile";
 
 function TopBar() {
   return (
-    <div className="flex flex-1 h-[88px] shadow-sm items-center justify-between font-jakarta p-[18px]">
+    <div className="flex  flex-1 h-[88px] shadow-sm items-center justify-between font-jakarta p-[18px] dark:text-white">
       <h2>Dashboard</h2>
       <div className="flex items-center space-x-8 ">
         {/* input div */}
@@ -26,7 +26,7 @@ function TopBar() {
           <img src={Calender} alt="" />
           <span className="font-inter text-[14px]">November 15, 2023</span>
         </div>
-        <div className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#DADDDD]">
+        <div className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#DADDDD] dark:bg-white">
           <img src={Bell} alt="" />
         </div>
         <MiniProfile />

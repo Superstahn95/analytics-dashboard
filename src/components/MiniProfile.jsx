@@ -27,14 +27,14 @@ function MiniProfile() {
               Stanley
             </span> */}
             <div className="flex flex-col">
-              <p className="text-end text-[#26282C] text-[16px]">
+              <p className="text-end text-[#26282C] dark:text-white text-[16px]">
                 Justin Bargson
               </p>
-              <p className="text-end text-[#787486] text-[14px]">
+              <p className="text-end text-[#787486] dark:text-white text-[14px]">
                 Justin@gmail.com
               </p>
             </div>
-            <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-700" />
+            <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-700 dark:text-white" />
           </Menu.Button>
         </div>
         <Transition
