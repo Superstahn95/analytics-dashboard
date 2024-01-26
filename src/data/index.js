@@ -84,18 +84,18 @@ export const dashboardAnalytics = [
 
 //sales data
 export const salesData = [
-  { month: "Jan", amount: 8000 },
-  { month: "Feb", amount: 15000 },
-  { month: "Mar", amount: 3000 },
-  { month: "Apr", amount: 23000 },
-  { month: "Mei", amount: 8000 },
-  { month: "Jun", amount: 45000 },
-  { month: "Jul", amount: 8000 },
-  { month: "Aug", amount: 16000 },
-  { month: "Sep", amount: 40000 },
-  { month: "Okt", amount: 4000 },
-  { month: "Nov", amount: 30000 },
-  { month: "Des", amount: 25000 },
+  { month: "Jan", amount: 8000, week: "wk1" },
+  { month: "Feb", amount: 15000, week: "wk2" },
+  { month: "Mar", amount: 3000, week: "wk3" },
+  { month: "Apr", amount: 23000, week: "wk4" },
+  { month: "May", amount: 8000, week: "wk5" },
+  { month: "Jun", amount: 45000, week: "wk6" },
+  { month: "Jul", amount: 8000, week: "wk7" },
+  { month: "Aug", amount: 16000, week: "wk8" },
+  { month: "Sep", amount: 40000, week: "wk9" },
+  { month: "Oct", amount: 4000, week: "wk10" },
+  { month: "Nov", amount: 30000, week: "wk11" },
+  { month: "Dec", amount: 25000, week: "wk12" },
 ];
 
 export const platformData = [

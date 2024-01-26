@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { salesData } from "../data";
 import {
   ComposedChart,
@@ -9,24 +9,16 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import WidgetWrapper from "./WidgetWrapper";
 import useTheme from "../hooks/useTheme";
 import ChartFilter from "./ChartFilter";
+import CustomTooltip from "./CustomTooltip";
 
 const CustomBar = (props) => {
   const { x, y, width, height } = props;
-
-  // Customize the curve height (adjust this value to your liking)
   const curveHeight = 30;
 
   return (
-    // <path
-    //   d={`M${x},${y + curveHeight} L${x},${y + height} Q${x + width / 2},${
-    //     y + height + curveHeight
-    //   } ${x + width},${y + height} L${x + width},${y + curveHeight} Z`}
-    //   fill={props.fill}
-    // />
     <path
       d={`M${x},${y} Q${x + width / 2},${y - curveHeight} ${x + width},${y} L${
         x + width
@@ -37,6 +29,7 @@ const CustomBar = (props) => {
 };
 
 function Chart() {
+  const [reading, setReading] = useState("month");
   const barColor = "#34CAA5";
   const barOpacity = 0.1;
   const maxReading = Math.max(...salesData.map((entry) => entry.amount));
@@ -65,7 +58,7 @@ function Chart() {
 
         <div className="flex items-center space-x-2">
           <span>Sort By: </span>
-          <ChartFilter />
+          <ChartFilter reading={reading} setReading={setReading} />
         </div>
       </div>
       <div className="mt-7">
@@ -91,7 +84,7 @@ function Chart() {
               strokeDasharray="5 5"
             />
             <XAxis
-              dataKey="month"
+              dataKey={reading}
               tickLine={false}
               //   tick={{ fill: "#525252" }}
               axisLine={{ strokeDasharray: "5 5" }}
@@ -103,7 +96,7 @@ function Chart() {
               ticks={ticks}
               tick={{ fill: axisLabelColor }}
             />
-            <Tooltip />
+            <Tooltip content={<CustomTooltip />} cursor={false} />
           </ComposedChart>
         </ResponsiveContainer>
       </div>

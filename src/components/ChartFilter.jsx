@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { Menu, Transition } from "@headlessui/react";
 
-function ChartFilter() {
+function ChartFilter({ reading, setReading }) {
   // pr-4 md:pr-16
   return (
     <div className="flex space-x-1  items-center   font-inter">
@@ -16,8 +16,8 @@ function ChartFilter() {
         <div>
           <Menu.Button className="inline-flex w-full p-1 border border-[#DADDDD] rounded-[28px] justify-center items-center">
             <div className="  ">
-              <p className="text-end text-[#26282C] dark:text-white text-[16px]">
-                Monthly
+              <p className="text-end capitalize text-[#26282C] dark:text-white text-[16px]">
+                {reading}ly
               </p>
             </div>
             <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-700 dark:text-white" />
@@ -35,13 +35,19 @@ function ChartFilter() {
           <Menu.Items className="absolute right-0 w-56 z-50 mt-2 origin-top-right bg-[#F7F8FA] dark:bg-slate-700 rounded shadow-sm">
             <div className="p-1">
               <Menu.Item>
-                <p className="flex hover:bg-[#34CAA5] hover:text-white text-gray-700 dark:text-white rounded p-2 text-sm group transition-colors items-center">
+                <button
+                  onClick={() => setReading("month")}
+                  className=" w-full flex hover:bg-[#34CAA5] hover:text-white text-gray-700 dark:text-white rounded p-2 text-sm group transition-colors items-center"
+                >
                   <PencilIcon className="h-4 w-4 mr-2" />
                   Monthly
-                </p>
+                </button>
               </Menu.Item>
               <Menu.Item>
-                <button className=" w-full flex hover:bg-[#34CAA5] hover:text-white text-gray-700 dark:text-white rounded p-2 text-sm group transition-colors items-center">
+                <button
+                  onClick={() => setReading("week")}
+                  className=" w-full flex hover:bg-[#34CAA5] hover:text-white text-gray-700 dark:text-white rounded p-2 text-sm group transition-colors items-center"
+                >
                   <CreditCardIcon className="h-4 w-4 mr-2" />
                   Weekly
                 </button>

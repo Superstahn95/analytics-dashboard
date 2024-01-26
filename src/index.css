@@ -2,3 +2,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .info-pointer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.5rem 0.5rem 0 0.5rem;
+  border-color: transparent transparent transparent white;
+  top: -0.25rem; 
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg); 
+} */
+
+.info-pointer {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.info-pointer::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+} */
+
+.custom-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* <div className="custom-tooltip relative bg-[#090C2C] inline-block text-white w-[80px] h-[32px] rounded-md text-center">
+<p className="label">{`X: ${payload[0].payload.month}`}</p>
+<div className="info-pointer"></div>
+</div> */
