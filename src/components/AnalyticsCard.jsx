@@ -10,7 +10,9 @@ function AnalyticsCard({ analytics }) {
     <WidgetWrapper>
       {/* icon and mini chart */}
       <div className="flex items-center justify-between">
-        <img src={analytics.url} alt="" />
+        <div className="w-[40px] h-[40px] border border-[#E6E6E6] flex items-center justify-center rounded-full">
+          <img src={analytics.url} alt="" />
+        </div>
         <img src={analytics.isIncrease ? Buy : Sell} alt="" />
       </div>
       <div className="mt-2">

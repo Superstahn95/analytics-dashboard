@@ -15,18 +15,19 @@ function OrderTable() {
   };
   return (
     <WidgetWrapper>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between ">
         <span className="font-jakarta text-[18px] text-[#26282C] dark:text-white font-bold">
           Last Orders
         </span>
         <span className="font-jakarta text-[18px] text-[#34CAA5]">See All</span>
       </div>
-      <table className="w-full mt-2">
+      {/* <div className="w-full overflow-x-scroll "> */}
+      <table className="w-full min-w-[600px]  mt-2">
         <tr>
           {tableHeaders.map((header) => (
             <th
               key={header}
-              className="text-left text-[#9CA4AB] dark:text-white font-jakarta text-[16px] py-2"
+              className="text-left text-[#9CA4AB]  dark:text-white font-jakarta text-[14px] md:text-[16px] py-2"
             >
               {header}
             </th>
@@ -37,21 +38,21 @@ function OrderTable() {
             <td>
               <div className="flex items-center space-x-3">
                 <img src={order.image} alt="user avi" />
-                <span className="font-jakarta text-[16px] text-[#3A3F51] dark:text-white py-4">
+                <span className="font-jakarta text-[14px] md:text-[16px] text-[#3A3F51] dark:text-white py-4">
                   {order.name}
                 </span>
               </div>
             </td>
-            <td className="font-jakarta text-[16px] text-[#737373] dark:text-white ">
+            <td className="font-jakarta text-[14px] md:text-[16px] text-[#737373] dark:text-white ">
               {order.date}
             </td>
-            <td className="font-jakarta text-[#0D062D] dark:text-white text-[16px]">
+            <td className="font-jakarta text-[14px] text-[#0D062D] dark:text-white md:text-[16px]">
               {order.amount}
             </td>
             <td
               className={`${
                 order.status === "Paid" ? "text-[#34CAA5]" : "text-[#ED544E]"
-              } font-jakarta text-[16px] `}
+              } font-jakarta text-[14px] md:text-[16px] `}
             >
               {order.status}
             </td>
@@ -69,6 +70,7 @@ function OrderTable() {
           </tr>
         ))}
       </table>
+      {/* </div> */}
       {showOrder && (
         <Invoice setShowOrder={setShowOrder} order={orderReceipt} />
       )}

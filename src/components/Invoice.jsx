@@ -4,7 +4,7 @@ import { XCircleIcon } from "@heroicons/react/24/outline";
 function Invoice({ order, setShowOrder }) {
   console.log(order);
   return (
-    <div className="fixed  top-0 left-0 w-screen h-screen  bg-black/40 flex items-center justify-center font-jakarta">
+    <div className="fixed  top-0 left-0 w-screen h-screen z-[1999] bg-black/40 flex items-center justify-center font-jakarta">
       <WidgetWrapper>
         <div className="w-full md:w-[600px]">
           <div className="mb-2">

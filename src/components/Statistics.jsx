@@ -19,7 +19,7 @@ function Statistics() {
             <AnalyticsCard key={analytics.id} analytics={analytics} />
           ))}
         </div>
-        <div className="md:col-span-3">
+        <div className="md:col-span-3 overflow-x-scroll">
           <OrderTable />
         </div>
         <div className="md:col-span-2">

@@ -1,18 +1,18 @@
 import React from "react";
 import { salesData } from "../data";
 import {
-  BarChart,
   ComposedChart,
   Bar,
   CartesianGrid,
   XAxis,
   YAxis,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import WidgetWrapper from "./WidgetWrapper";
 import useTheme from "../hooks/useTheme";
+import ChartFilter from "./ChartFilter";
 
 const CustomBar = (props) => {
   const { x, y, width, height } = props;
@@ -64,7 +64,8 @@ function Chart() {
         </span>
 
         <div className="flex items-center space-x-2">
-          <span>Sort By</span>
+          <span>Sort By: </span>
+          <ChartFilter />
         </div>
       </div>
       <div className="mt-7">
