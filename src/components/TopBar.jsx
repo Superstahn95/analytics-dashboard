@@ -10,7 +10,7 @@ function TopBar() {
       <h2>Dashboard</h2>
       <div className="flex items-center space-x-8 ">
         {/* input div */}
-        <div className="relative border border-[#DADDDD] rounded-[20px] w-[340px] bg-white">
+        <div className="hidden md:block relative border border-[#DADDDD] rounded-[20px] w-[340px] bg-white">
           <input
             type="text"
             className="border-none outline-none p-2 text-[14px] font-inter rounded-[20px] ml-5"

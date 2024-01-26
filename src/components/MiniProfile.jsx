@@ -26,7 +26,7 @@ function MiniProfile() {
             {/* <span className="hidden md:block font-medium text-gray-700">
               Stanley
             </span> */}
-            <div className="flex flex-col">
+            <div className=" flex-col hidden md:flex ">
               <p className="text-end text-[#26282C] dark:text-white text-[16px]">
                 Justin Bargson
               </p>
