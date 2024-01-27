@@ -6,7 +6,7 @@ function Invoice({ order, setShowOrder }) {
   return (
     <div className="fixed  top-0 left-0 w-screen h-screen z-[1999] bg-black/40 flex items-center justify-center font-jakarta">
       <WidgetWrapper>
-        <div className="w-full md:w-[600px]">
+        <div className=" w-[300px] flex flex-col items-center justify-center">
           <div className="mb-2">
             {" "}
             <h2 className="text-[#34CAA5] text-xl font-bold font-jakarta">
@@ -29,13 +29,13 @@ function Invoice({ order, setShowOrder }) {
             <h3 className="font-bold">Status</h3>
             <span>{order?.status}</span>
           </div>
+          <button
+            onClick={() => setShowOrder(false)}
+            className="p-1 bg-[#34CAA5] rounded-md text-white w-[6rem]"
+          >
+            Exit
+          </button>
         </div>
-        <button
-          onClick={() => setShowOrder(false)}
-          className="p-1 bg-[#34CAA5] rounded-md text-white w-[6rem]"
-        >
-          Exit
-        </button>
       </WidgetWrapper>
     </div>
   );

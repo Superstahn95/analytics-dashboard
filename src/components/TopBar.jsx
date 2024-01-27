@@ -8,7 +8,7 @@ import { Bars4Icon, XCircleIcon } from "@heroicons/react/24/outline";
 function TopBar({ isOpen, toggleSidebar }) {
   return (
     <div className="flex  flex-1 h-[88px] shadow-sm items-center justify-between font-jakarta p-[18px] dark:text-white">
-      <div onClick={toggleSidebar} className="block md:hidden cursor-pointer">
+      <div onClick={toggleSidebar} className="block  md:hidden cursor-pointer">
         {isOpen ? (
           <XCircleIcon
             className={`${
@@ -39,10 +39,12 @@ function TopBar({ isOpen, toggleSidebar }) {
 
         {/* date div */}
         <div className=" items-center space-x-2 hidden md:flex">
-          <img src={Calender} alt="" />
+          <div className="dark:bg-[#34CAA5] dark:w-[40px]  dark:h-[40px] flex items-center justify-center rounded-full">
+            <img src={Calender} alt="" />
+          </div>
           <span className="font-inter text-[14px]">November 15, 2023</span>
         </div>
-        <div className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#DADDDD] dark:bg-white">
+        <div className="w-[40px] h-[40px] hidden  md:flex items-center justify-center rounded-full  border border-[#DADDDD] dark:bg-[#34CAA5]">
           <img src={Bell} alt="" />
         </div>
         <MiniProfile />

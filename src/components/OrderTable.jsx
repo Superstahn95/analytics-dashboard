@@ -16,10 +16,12 @@ function OrderTable() {
   return (
     <WidgetWrapper>
       <div className="flex items-center justify-between ">
-        <span className="font-jakarta text-[18px] text-[#26282C] dark:text-white font-bold">
+        <span className="font-jakarta text-[14px] md:text-[18px] text-[#26282C] dark:text-white font-bold">
           Last Orders
         </span>
-        <span className="font-jakarta text-[18px] text-[#34CAA5]">See All</span>
+        <span className="font-jakarta text-[14px] md:text-[18px] text-[#34CAA5]">
+          See All
+        </span>
       </div>
       {/* <div className="w-full overflow-x-scroll "> */}
       <table className="w-full min-w-[600px]  mt-2">

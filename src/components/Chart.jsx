@@ -29,16 +29,19 @@ const CustomBar = (props) => {
 };
 
 function Chart() {
+  const [hoveredBar, setHoveredBar] = useState(null);
   const [reading, setReading] = useState("month");
   const barColor = "#34CAA5";
   const barOpacity = 0.1;
   const maxReading = Math.max(...salesData.map((entry) => entry.amount));
-
+  console.log("The max reading is...");
+  console.log(maxReading);
   const { theme } = useTheme();
   const axisLabelColor = theme === "dark" ? "white" : "#525252";
   // Specify your colors
   const defaultColor = "rgba(52, 202, 165, 0.1)"; // Default color for bars with 10% opacity
   const highlightColor = "#34CAA5"; // Color for the bar with the longest reading
+  const darkModeBarColor = "rgba(52, 202, 165, 0.5)";
 
   const increment = 5000;
   const maxTick = 60000;
@@ -52,12 +55,14 @@ function Chart() {
   return (
     <WidgetWrapper>
       <div className="flex items-center justify-between ">
-        <span className="font-jakarta text-[18px] text-[#26282C] dark:text-white font-bold">
+        <span className="font-jakarta text-[14px] md:text-[18px] text-[#26282C] dark:text-white font-bold">
           Sales Trends
         </span>
 
         <div className="flex items-center space-x-2">
-          <span>Sort By: </span>
+          <span className="text-[#3A3F51] font-jakarta text-[14px] dark:text-white">
+            Sort By:{" "}
+          </span>
           <ChartFilter reading={reading} setReading={setReading} />
         </div>
       </div>
@@ -70,13 +75,11 @@ function Chart() {
             data={salesData}
             className="w-full h-full"
           >
-            {/* <Bar
+            <Bar
+              shape={<CustomBar />}
               dataKey="amount"
-                fill={`${barColor}${Math.round(barOpacity * 255).toString(16)}`}
-              fill={defaultColor}
-              barSize={30}
-            /> */}
-            <Bar shape={<CustomBar />} dataKey="amount" fill={defaultColor} />
+              fill={theme === "dark" ? darkModeBarColor : defaultColor}
+            />
 
             <CartesianGrid
               stroke="#EAEAEA"
@@ -87,7 +90,7 @@ function Chart() {
               dataKey={reading}
               tickLine={false}
               //   tick={{ fill: "#525252" }}
-              axisLine={{ strokeDasharray: "5 5" }}
+              axisLine={{ strokeDasharray: "5 5", stroke: "#EAEAEA" }}
               tick={{ fill: axisLabelColor }}
             />
             <YAxis
