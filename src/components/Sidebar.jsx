@@ -5,6 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 import Controls from "./Controls";
 import useMobileDetect from "../hooks/useMobileDetect";
 import { useEffect, useState } from "react";
+import { XCircleIcon } from "@heroicons/react/24/outline";
 
 function Sidebar({ isOpen, toggleSidebar, setIsSidebarOpen }) {
   const [selectedLink, setSelectedLink] = useState(1);
@@ -20,6 +21,14 @@ function Sidebar({ isOpen, toggleSidebar, setIsSidebarOpen }) {
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
+      {isOpen && isMobile && (
+        <div
+          onClick={toggleSidebar}
+          className="fixed top-7 left-[200px] bg-black/40 z-[99]"
+        >
+          <XCircleIcon className="dark:text-white text-black w-8 h-8 " />
+        </div>
+      )}
       <div className="py-[20px] flex flex-col items-center justify-between bg-[#F7F8FA]  dark:bg-slate-900 h-[90vh]">
         {/* logo div */}
         <div className="flex flex-col space-y-5 items-center justify-center w-full">
