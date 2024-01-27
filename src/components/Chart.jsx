@@ -13,68 +13,43 @@ import WidgetWrapper from "./WidgetWrapper";
 import useTheme from "../hooks/useTheme";
 import ChartFilter from "./ChartFilter";
 import CustomTooltip from "./CustomTooltip";
-
-const CustomBar = (props) => {
-  const { x, y, width, height } = props;
-  const curveHeight = 30;
-
-  return (
-    <path
-      d={`M${x},${y} Q${x + width / 2},${y - curveHeight} ${x + width},${y} L${
-        x + width
-      },${y + height} L${x},${y + height} Z`}
-      fill={props.fill}
-    />
-  );
-};
+import CustomBar from "./CustomBar";
 
 function Chart() {
-  const [hoveredBar, setHoveredBar] = useState(null);
+  //state value of current value being read
   const [reading, setReading] = useState("month");
-  const barColor = "#34CAA5";
-  const barOpacity = 0.1;
-  const maxReading = Math.max(...salesData.map((entry) => entry.amount));
-  console.log("The max reading is...");
-  console.log(maxReading);
   const { theme } = useTheme();
   const axisLabelColor = theme === "dark" ? "white" : "#525252";
-  // Specify your colors
-  const defaultColor = "rgba(52, 202, 165, 0.1)"; // Default color for bars with 10% opacity
-  const highlightColor = "#34CAA5"; // Color for the bar with the longest reading
+  // chart colors for both themes
+  const defaultColor = "rgba(52, 202, 165, 0.1)";
   const darkModeBarColor = "rgba(52, 202, 165, 0.5)";
 
   const increment = 5000;
   const maxTick = 60000;
   const numberOfTicks = maxTick / increment;
 
-  // Create an array of tick values
+  // Create an array of tick values for my y axis
   const ticks = Array.from(
     { length: numberOfTicks + 1 },
     (_, index) => index * increment
   );
   return (
     <WidgetWrapper>
-      <div className="flex items-center justify-between ">
+      <div className="flex items-center justify-between min-w-[600px]">
         <span className="font-jakarta text-[14px] md:text-[18px] text-[#26282C] dark:text-white font-bold">
           Sales Trends
         </span>
 
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 ">
           <span className="text-[#3A3F51] font-jakarta text-[14px] dark:text-white">
             Sort By:{" "}
           </span>
           <ChartFilter reading={reading} setReading={setReading} />
         </div>
       </div>
-      <div className="mt-7">
+      <div className="mt-7 min-w-[600px] ">
         <ResponsiveContainer width="100%" height={300}>
-          <ComposedChart
-            //   width=""
-            //   width={800}
-            //   height={300}
-            data={salesData}
-            className="w-full h-full"
-          >
+          <ComposedChart data={salesData} className="w-full h-full">
             <Bar
               shape={<CustomBar />}
               dataKey="amount"
@@ -89,7 +64,6 @@ function Chart() {
             <XAxis
               dataKey={reading}
               tickLine={false}
-              //   tick={{ fill: "#525252" }}
               axisLine={{ strokeDasharray: "5 5", stroke: "#EAEAEA" }}
               tick={{ fill: axisLabelColor }}
             />
@@ -106,6 +80,5 @@ function Chart() {
     </WidgetWrapper>
   );
 }
-// #34CAA5
-//#EAEAEA
+
 export default Chart;

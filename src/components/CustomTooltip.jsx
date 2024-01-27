@@ -1,3 +1,4 @@
+//custom tool tip component for my chart
 function CustomTooltip({ active, payload }) {
   if (active && payload && payload.length) {
     return (

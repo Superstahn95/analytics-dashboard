@@ -4,13 +4,11 @@ import Search from "/svg/search.svg";
 import Bell from "/svg/solar_bell-outline.svg";
 import MiniProfile from "./MiniProfile";
 import { Bars4Icon, XCircleIcon } from "@heroicons/react/24/outline";
-import useMobileDetect from "../hooks/useMobileDetect";
 
 function TopBar({ isOpen, toggleSidebar }) {
-  const isMobile = useMobileDetect();
   return (
-    <div className="flex  flex-1 h-[88px] shadow-sm items-center justify-between font-jakarta p-[18px] dark:text-white">
-      {/* <div onClick={toggleSidebar} className="block  md:hidden cursor-pointer">
+    <div className="flex sticky top-0 bg-[#F7F8FA] dark:bg-slate-800 z-[99] flex-1 h-[88px] shadow-sm items-center justify-between font-jakarta p-[18px] dark:text-white">
+      <div onClick={toggleSidebar} className="block  md:hidden cursor-pointer">
         {isOpen ? (
           <XCircleIcon
             className={`${
@@ -24,31 +22,8 @@ function TopBar({ isOpen, toggleSidebar }) {
             } dark:text-white text-black w-8 h-8 transition-transform transform duration-500`}
           />
         )}
-      </div> */}
-      <div onClick={toggleSidebar} className="block  md:hidden cursor-pointer">
-        {!isOpen && (
-          <Bars4Icon
-            className={`${
-              isOpen ? "translate-x-16" : "translate-x-0"
-            } dark:text-white text-black w-8 h-8 transition-transform transform duration-500`}
-          />
-        )}
-        {/* {isOpen && isMobile && (
-          <XCircleIcon
-            className={`${
-              isOpen ? "translate-x-16" : "translate-x-0"
-            } dark:text-white text-black w-8 h-8 transition-transform transform duration-500`}
-          />
-        )} */}
       </div>
-      {isOpen && isMobile && (
-        <div
-          onClick={toggleSidebar}
-          className="fixed top-7 left-[90px] bg-black/40 z-[99]"
-        >
-          <XCircleIcon className="dark:text-white text-black w-8 h-8 " />
-        </div>
-      )}
+
       <h2 className="hidden md:block">Dashboard</h2>
       <div className="flex items-center space-x-8 ">
         {/* input div */}

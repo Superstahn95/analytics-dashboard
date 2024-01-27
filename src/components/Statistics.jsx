@@ -10,11 +10,11 @@ function Statistics() {
     <div className="p-[20px]">
       <div className="grid md:grid-cols-5 gap-4">
         {/* chart component */}
-        <div className="md:col-span-3">
+        <div className="md:col-span-3 overflow-x-scroll">
           <Chart />
         </div>
         {/* analytics */}
-        <div className="md:col-span-2 grid md:grid-cols-2 gap-4">
+        <div className="md:col-span-2 grid md:grid-cols-2 gap-4 ">
           {dashboardAnalytics.map((analytics) => (
             <AnalyticsCard key={analytics.id} analytics={analytics} />
           ))}

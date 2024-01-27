@@ -5,7 +5,6 @@ import Uptrend from "/svg/trending-up.svg";
 import Downtrend from "/svg/trending-down.svg";
 
 function AnalyticsCard({ analytics }) {
-  console.log(analytics);
   return (
     <WidgetWrapper>
       {/* icon and mini chart */}

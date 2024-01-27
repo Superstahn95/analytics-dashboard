@@ -10,7 +10,6 @@ import {
 import { Menu, Transition } from "@headlessui/react";
 
 function ChartFilter({ reading, setReading }) {
-  // pr-4 md:pr-16
   return (
     <div className="flex space-x-1  items-center   font-inter">
       <Menu as="div" className="relative inline-block text-left">

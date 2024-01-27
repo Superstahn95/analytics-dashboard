@@ -13,7 +13,7 @@ function Controls() {
     <div>
       <ul className="flex flex-col items-center justify-center space-y-5 ">
         {controls.map((control) => (
-          <li key={control.id}>
+          <li className="cursor-pointer" key={control.id}>
             <img src={control.url} alt="" />
           </li>
         ))}
